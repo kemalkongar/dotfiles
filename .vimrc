@@ -65,6 +65,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme solarized
 set background=dark
+set term=xterm-256color
 
 "Enable syntax highlighting
 syntax enable
