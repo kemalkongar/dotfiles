@@ -1,0 +1,63 @@
+set nocompatible
+autocmd vimenter * ++nested colorscheme gruvbox
+syntax on
+set background=dark
+set noerrorbells
+set textwidth=100
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent 
+set linebreak 
+set number
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set undolevels=1000
+set ruler
+set spell
+set encoding=utf8
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+
+" " Fast saving
+nmap <leader>w :w!<cr>
+nmap <leader>wq :wq<cr>
+nmap <leader>q :q<cr>
+" " :W sudo saves the file
+" " (useful for handling the permission-denied error)
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+map <leader>ss :setlocal spell!<cr>
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
+
+" " There are certain files that we would never want to edit with Vim.
+" " Wildmenu will ignore files with these extensions.
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+call plug#begin()
+
+Plug 'preservim/nerdtree'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+call plug#end()
