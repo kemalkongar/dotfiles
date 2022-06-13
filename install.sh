@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mv .vimrc ~
+cp .vimrc ~
 
-mv .vim ~
+cp -R .vim ~
 
 vim +'PlugInstall --sync' +qa
