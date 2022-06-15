@@ -192,7 +192,7 @@ Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
